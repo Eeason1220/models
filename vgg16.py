@@ -80,7 +80,7 @@ class VGG16(nn.Module):
     	x3 = self.cnn_layer3(x2)
     	x4 = self.cnn_layer4(x3)
     	x5 = self.cnn_layer5(x4)
-    	xout = x5.flatten(1)
+    	xout = torch.flatten(x5, 1, 3)
     	xout = self.fc_layer(xout)
     	return xout
 
