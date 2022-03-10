@@ -5,9 +5,9 @@ import torch.nn as nn
 
 class VGG16(nn.Module):
 	def __init__(self, nclasses = 11):
-		super(VGG16, self).__init__()
+	    super(VGG16, self).__init__()
 
-		self.cnn_layer1 = nn.Sequential(
+	    self.cnn_layer1 = nn.Sequential(
             nn.Conv2d(3, 64, 3, 1, 1),
             nn.BatchNorm2d(64),
             nn.Relu(),
